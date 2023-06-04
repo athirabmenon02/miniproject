@@ -20,6 +20,21 @@
   <dependencies>
 
     <dependency>
+      <groupId>org.jfxcore</groupId>
+      <artifactId>javafx-fxml</artifactId>
+      <version>18-ea+1</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-controls</artifactId>
+      <version>21-ea+17</version>
+    </dependency>
+
+    
+    
+    <dependency>
       <groupId>technology.tabula</groupId>
       <artifactId>tabula</artifactId>
       <version>1.0.5</version>
@@ -50,6 +65,16 @@
     </dependency>
  
   </dependencies>
+<repositories>
+    <repository>
+        <id>maven-central</id>
+        <url>https://repo.maven.apache.org/maven2/</url>
+    </repository>
+    <repository>
+        <id>openjfx</id>
+        <url>https://repo.maven.apache.org/maven2/org/openjfx/</url>
+    </repository>
+</repositories>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -93,6 +118,8 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+      
+
       </plugins>
     </pluginManagement>
   </build>

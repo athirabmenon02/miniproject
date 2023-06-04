@@ -10,7 +10,7 @@ import java.io.IOException;
 public class PdfToExcelWriter2 {
 
     public static void main(String[] args) {
-        try (PDDocument document = PDDocument.load(new FileInputStream("src/main/java/com/example/timetable.pdf"))) {
+        try (PDDocument document = PDDocument.load(new FileInputStream("miniproject/seat/src/main/java/com/example/timetable.pdf"))) {
             PDFTextStripper stripper = new PDFTextStripper();
             stripper.setStartPage(2);
             stripper.setEndPage(9);
