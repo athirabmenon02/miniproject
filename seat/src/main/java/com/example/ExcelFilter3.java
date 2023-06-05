@@ -15,7 +15,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class ExcelFilter3{
 
     public static void main(String[] args) throws IOException {
-        String excelFilePath = "src/main/java/com/example/appearance.xlsx";
+        String excelFilePath = "miniproject/seat/src/main/java/com/example/appearance_modified.xlsx";
         String sheetName = "AppearingStudentEligibilityRepo";
         String branchColumnName = "Branch Name";
         String slotColumnName = "Slot";
@@ -64,7 +64,7 @@ public class ExcelFilter3{
             for (Row row : branchSlotMap.get(key)) {
                 int newRowNum = newSheet.getLastRowNum() + 1;
                 Row newRow = newSheet.createRow(newRowNum);
-                Cell studentCell = row.getCell(0);
+                Cell studentCell = row.getCell(4);
                 String studentValue = studentCell.getStringCellValue();
                 Cell newCell = newRow.createCell(0);
                 newCell.setCellValue(studentValue);
@@ -75,7 +75,7 @@ public class ExcelFilter3{
         }
 
         inputStream.close();
-        FileOutputStream outputStream = new FileOutputStream("Excelfilter3.xlsx");
+        FileOutputStream outputStream = new FileOutputStream("Excel.xlsx");
         workbook.write(outputStream);
         workbook.close();
         outputStream.close();
